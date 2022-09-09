@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.droid.sample.databinding.ActivityServiceNormalBinding
 import com.droid.sample.service_normal.services.NormalDownloadService
+import com.droid.sample.utils.extensions.activity.isMyServiceRunning
 import com.droid.sample.utils.extensions.toast.toast
 
 class NormalServiceActivity : AppCompatActivity() {
@@ -23,7 +24,7 @@ class NormalServiceActivity : AppCompatActivity() {
             }
 
             checkServiceId.setOnClickListener {
-                if (NormalDownloadService.isCurrentServiceRunning()) {
+                if (isMyServiceRunning(NormalDownloadService::class.java)) {
                     toast(
                         msg = "Service is running",
                         isShort = true,
@@ -39,7 +40,11 @@ class NormalServiceActivity : AppCompatActivity() {
             }
 
             stopServiceId.setOnClickListener {
-                NormalDownloadService.stopService()
+                if (isMyServiceRunning(NormalDownloadService::class.java)) {
+                    val intent =
+                        Intent(this@NormalServiceActivity, NormalDownloadService::class.java)
+                    stopService(intent)
+                }
             }
 
         }
