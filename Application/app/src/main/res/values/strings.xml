@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Code</string>
+    <string name="normal_service">Normal Service</string>
 </resources>
