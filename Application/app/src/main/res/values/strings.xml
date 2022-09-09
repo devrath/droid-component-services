@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Code</string>
     <string name="normal_service">Normal Service</string>
+    <string name="start_service">Start service</string>
+    <string name="check_service_is_running">Check Service is running</string>
+    <string name="stop_service">Stop service</string>
 </resources>

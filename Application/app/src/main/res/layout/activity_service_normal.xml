@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/screen_padding"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/startServiceId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_service"/>
+
+    <Button
+        android:id="@+id/checkServiceId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/check_service_is_running"/>
+
+    <Button
+        android:id="@+id/stopServiceId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_service"/>
 
 </LinearLayout>

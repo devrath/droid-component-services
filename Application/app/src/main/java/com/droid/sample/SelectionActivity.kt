@@ -16,7 +16,7 @@ class SelectionActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.apply {
-            this.normalServiceId.setOnClickListener {
+            normalServiceId.setOnClickListener {
                 openActivity(NormalServiceActivity::class.java)
             }
         }

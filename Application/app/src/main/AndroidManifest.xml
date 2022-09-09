@@ -23,10 +23,14 @@
             </intent-filter>
         </activity>
 
+        <service android:name=".service_normal.services.NormalDownloadService" />
+
         <activity android:name=".service_normal.NormalServiceActivity"
             android:label="@string/normal_service"
             android:theme="@style/Theme.Code"
             />
+
+
     </application>
 
 </manifest>
