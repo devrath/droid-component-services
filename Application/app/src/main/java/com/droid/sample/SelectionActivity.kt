@@ -3,6 +3,7 @@ package com.droid.sample
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.droid.sample.databinding.ActivityMainBinding
+import com.droid.sample.intent_service.IntentServiceActivity
 import com.droid.sample.normal_service.NormalServiceActivity
 import com.droid.sample.utils.extensions.intent.openActivity
 
@@ -19,9 +20,11 @@ class SelectionActivity : AppCompatActivity() {
             normalServiceId.setOnClickListener {
                 openActivity(NormalServiceActivity::class.java)
             }
+            intentServiceId.setOnClickListener {
+                openActivity(IntentServiceActivity::class.java)
+            }
         }
     }
-
 
 
 }

@@ -15,4 +15,10 @@
         android:layout_height="wrap_content"
         android:text="@string/normal_service" />
 
+    <Button
+        android:id="@+id/intentServiceId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/intent_service" />
+
 </LinearLayout>

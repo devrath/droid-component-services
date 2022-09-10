@@ -24,11 +24,15 @@
         </activity>
 
         <service android:name=".normal_service.services.NormalDownloadService" />
+        <service android:name=".intent_service.services.IntentDownloadService" android:exported="false" />
 
         <activity android:name=".normal_service.NormalServiceActivity"
             android:label="@string/normal_service"
-            android:theme="@style/Theme.Code"
-            />
+            android:theme="@style/Theme.Code" />
+
+        <activity android:name=".intent_service.IntentServiceActivity"
+            android:label="@string/intent_service"
+            android:theme="@style/Theme.Code" />
 
 
     </application>
