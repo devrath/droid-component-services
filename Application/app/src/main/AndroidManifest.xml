@@ -34,6 +34,9 @@
             android:label="@string/intent_service"
             android:theme="@style/Theme.Code" />
 
+        <activity android:name=".job_intent_service.JobIntentServiceActivity"
+            android:label="@string/job_intent_service"
+            android:theme="@style/Theme.Code" />
 
     </application>
 

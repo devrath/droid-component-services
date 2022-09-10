@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.droid.sample.databinding.ActivityMainBinding
 import com.droid.sample.intent_service.IntentServiceActivity
+import com.droid.sample.job_intent_service.JobIntentServiceActivity
 import com.droid.sample.normal_service.NormalServiceActivity
 import com.droid.sample.utils.extensions.intent.openActivity
 
@@ -22,6 +23,9 @@ class SelectionActivity : AppCompatActivity() {
             }
             intentServiceId.setOnClickListener {
                 openActivity(IntentServiceActivity::class.java)
+            }
+            jobIntentServiceId.setOnClickListener {
+                openActivity(JobIntentServiceActivity::class.java)
             }
         }
     }

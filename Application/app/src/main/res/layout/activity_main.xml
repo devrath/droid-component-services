@@ -21,4 +21,10 @@
         android:layout_height="wrap_content"
         android:text="@string/intent_service" />
 
+    <Button
+        android:id="@+id/jobIntentServiceId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/job_intent_service" />
+
 </LinearLayout>

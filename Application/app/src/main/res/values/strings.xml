@@ -5,4 +5,5 @@
     <string name="check_service_is_running">Check Service is running</string>
     <string name="stop_service">Stop service</string>
     <string name="intent_service">Intent Service</string>
+    <string name="job_intent_service">Job Intent Service</string>
 </resources>
