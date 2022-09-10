@@ -23,9 +23,9 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".service_normal.services.NormalDownloadService" />
+        <service android:name=".normal_service.services.NormalDownloadService" />
 
-        <activity android:name=".service_normal.NormalServiceActivity"
+        <activity android:name=".normal_service.NormalServiceActivity"
             android:label="@string/normal_service"
             android:theme="@style/Theme.Code"
             />

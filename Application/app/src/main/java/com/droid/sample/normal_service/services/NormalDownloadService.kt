@@ -1,10 +1,9 @@
-package com.droid.sample.service_normal.services
+package com.droid.sample.normal_service.services
 
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
 import android.os.Looper
-import com.droid.sample.utils.extensions.activity.isMyServiceRunning
 import com.droid.sample.utils.extensions.toast.toast
 
 

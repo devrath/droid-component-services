@@ -1,10 +1,10 @@
-package com.droid.sample.service_normal
+package com.droid.sample.normal_service
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.droid.sample.databinding.ActivityServiceNormalBinding
-import com.droid.sample.service_normal.services.NormalDownloadService
+import com.droid.sample.normal_service.services.NormalDownloadService
 import com.droid.sample.utils.extensions.activity.isMyServiceRunning
 import com.droid.sample.utils.extensions.toast.toast
 
