@@ -4,6 +4,9 @@
     package="com.droid.sample">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
 
     <application
         android:allowBackup="true"
@@ -26,6 +29,7 @@
         </activity>
 
         <service android:name=".normal_service.services.NormalDownloadService" />
+        <service android:name=".foreground_service.services.MyForegroundService" />
         <service android:name=".intent_service.services.IntentDownloadService" android:exported="false" />
         <service android:name=".job_intent_service.services.MyJobIntentService" android:permission="android.permission.BIND_JOB_SERVICE" />
 
@@ -39,6 +43,10 @@
 
         <activity android:name=".job_intent_service.JobIntentServiceActivity"
             android:label="@string/job_intent_service"
+            android:theme="@style/Theme.Code" />
+
+        <activity android:name=".foreground_service.ForegroundServiceActivity"
+            android:label="@string/foreground_service"
             android:theme="@style/Theme.Code" />
 
     </application>

@@ -6,4 +6,5 @@
     <string name="stop_service">Stop service</string>
     <string name="intent_service">Intent Service</string>
     <string name="job_intent_service">Job Intent Service</string>
+    <string name="foreground_service">Foreground Service</string>
 </resources>

@@ -27,4 +27,10 @@
         android:layout_height="wrap_content"
         android:text="@string/job_intent_service" />
 
+    <Button
+        android:id="@+id/foregroundServiceId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/foreground_service" />
+
 </LinearLayout>
