@@ -1,7 +1,14 @@
-# droid-component-services
-This repository provides samples on how to use android service comonent
+<img src="https://github.com/devrath/devrath/blob/master/images/kotlin_logo.png" align="right" title="Kotlin Logo" width="120">
 
-
+# droid-component-services 🧞‍
+<p align="left">
+<a><img src="https://img.shields.io/badge/Android-services-brightgreen"></a>
+<a><img src="https://img.shields.io/badge/Service%20Component-Normal%20Service-blue"></a>
+<a><img src="https://img.shields.io/badge/Service%20Component-Intent%20Service-green"></a>
+<a><img src="https://img.shields.io/badge/Service%20Component-Job%20Intent%20Service-orange"></a>
+<a><img src="https://img.shields.io/badge/Service-Foreground%20Service-yellow"></a>
+<a><img src="https://img.shields.io/badge/Service-Background%20Service-red"></a>
+</p>
 
 ## **`𝙲𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚎`** 🙋‍♂️
 Read [contribution guidelines](CONTRIBUTING.md) for more information regarding contribution.
