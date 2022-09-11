@@ -13,6 +13,7 @@ import androidx.core.app.NotificationCompat
 import com.droid.sample.R
 import com.droid.sample.SelectionActivity
 import com.droid.sample.foreground_service.ForegroundServiceActivity
+import com.droid.sample.normal_service.services.NormalDownloadService
 import com.droid.sample.utils.extensions.toast.toast
 
 class MyForegroundService : Service() {
@@ -40,25 +41,30 @@ class MyForegroundService : Service() {
     }
 
     override fun onDestroy() {
-        if(lonRunningThread!=null && lonRunningThread?.isAlive == true){
-            lonRunningThread?.interrupt()
-        }
+        interuptTask()
         displayToast("Service is destroyed")
         super.onDestroy()
     }
 
     private var lonRunningThread: Thread? = object : Thread() {
         override fun run() {
-            Looper.prepare()
-            while (true) {
+            while (!currentThread().isInterrupted) {
                 try {
-                    sleep(SERVICE_DURATION)
+                    if (Looper.myLooper()==null){ Looper.prepare(); }
+                    sleep(NormalDownloadService.SERVICE_DURATION)
                     displayToast("Task is Completed")
-                    if (::pendingIntent.isInitialized) {
-                        pendingIntent.cancel()
-                    }
+                    stopSelf()
+                } catch (e: InterruptedException) {
+                    currentThread().interrupt() // propagate interrupt
                 }
-                catch (exception: Exception) { exception.printStackTrace() }
+            }
+        }
+    }
+
+    private fun interuptTask() {
+        if (lonRunningThread != null && lonRunningThread?.isAlive == true) {
+            lonRunningThread?.let {
+                it.interrupt()
             }
         }
     }
@@ -69,15 +75,18 @@ class MyForegroundService : Service() {
         val notificationIntent = Intent(this, SelectionActivity::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_SINGLE_TOP
         }
-        val actionIntent =  setMutableFlag(context = applicationContext,intent = notificationIntent)
 
+        setMutableFlag(context = applicationContext,intent = notificationIntent)?.let {
+           pendingIntent = it
+        }
         val notification = NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
             .setContentTitle("Title of foreground service")
             .setContentText("Content of foreground service")
-            .setContentIntent(actionIntent)
+            .setContentIntent(pendingIntent)
             .build()
 
         startForeground(1, notification)
+
     }
 
     private fun createNotificationChannel() {
