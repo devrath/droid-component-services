@@ -3,7 +3,6 @@ package com.droid.sample.intent_service.services
 import android.app.IntentService
 import android.content.Intent
 import android.util.Log
-import android.widget.Toast
 
 
 const val NAME_OF_OUR_SERVICE = "our intent service"
@@ -19,13 +18,13 @@ class IntentDownloadService : IntentService(NAME_OF_OUR_SERVICE){
 
     @Deprecated("Deprecated in Java")
     override fun onHandleIntent(intent: Intent?) {
-        displayToast("Service is started")
+        logMessage("Service is started")
         intent?.let {
             currentCounter = it.getIntExtra(INTENT_COUNTER_KEY,0)
             // --> Long running operation
             try {
                 Thread.sleep(SERVICE_DURATION)
-                displayToast("Task is Completed->$currentCounter")
+                logMessage("Task is Completed->$currentCounter")
             } catch (exception: Exception) { exception.printStackTrace() }
         }
     }
@@ -33,17 +32,17 @@ class IntentDownloadService : IntentService(NAME_OF_OUR_SERVICE){
     @Deprecated("Deprecated in Java")
     override fun onStart(intent: Intent?, startId: Int) {
         super.onStart(intent, startId)
-        displayToast("Service is created")
+        logMessage("Service is created")
     }
 
     @Deprecated("Deprecated in Java")
     override fun onDestroy() {
         super.onDestroy()
-        displayToast("Service is destroyed")
+        logMessage("Service is destroyed")
     }
 
 
-    private fun displayToast(message: String) {
+    private fun logMessage(message: String) {
         // applicationContext?.let { it -> toast(msg = message,isShort = false, context = it) }
         Log.d("IntentService",message)
     }
