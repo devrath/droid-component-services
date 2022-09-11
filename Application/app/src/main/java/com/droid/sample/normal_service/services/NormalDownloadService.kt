@@ -26,22 +26,30 @@ class NormalDownloadService : Service(){
     }
 
     override fun onDestroy() {
-        if(lonRunningThread!=null && lonRunningThread?.isAlive == true){
-            lonRunningThread?.interrupt()
-        }
+        interuptTask()
         displayToast("Service is destroyed")
         super.onDestroy()
     }
 
-    var lonRunningThread: Thread? = object : Thread() {
+    private fun interuptTask() {
+        if (lonRunningThread != null && lonRunningThread?.isAlive == true) {
+            lonRunningThread?.let {
+                it.interrupt()
+            }
+        }
+    }
+
+    private var lonRunningThread: Thread? = object : Thread() {
         override fun run() {
-            Looper.prepare()
-            while (true) {
+            while (!currentThread().isInterrupted) {
                 try {
+                    if (Looper.myLooper()==null){ Looper.prepare(); }
                     sleep(SERVICE_DURATION)
                     displayToast("Task is Completed")
+                    interuptTask()
+                } catch (e: InterruptedException) {
+                    currentThread().interrupt() // propagate interrupt
                 }
-                catch (exception: Exception) { exception.printStackTrace() }
             }
         }
     }
