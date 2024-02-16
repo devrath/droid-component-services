@@ -14,7 +14,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.Services"
         tools:targetApi="31">
@@ -30,13 +30,13 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".modules.normal_service.services.NormalDownloadService" />
-        <service android:name=".modules.intent_service.services.IntentDownloadService" android:exported="false" />
+        <service android:name=".modules.started_services.normal_service.services.NormalDownloadService" />
+        <service android:name=".modules.started_services.intent_service.services.IntentDownloadService" android:exported="false" />
         <service
-            android:name=".modules.job_scheduler.services.MyJobScheduler"
+            android:name=".modules.started_services.job_scheduler.services.MyJobScheduler"
             android:permission="android.permission.BIND_JOB_SERVICE" />
         <service
-            android:name=".modules.job_intent_service.services.MyJobIntentService"
+            android:name=".modules.started_services.job_intent_service.services.MyJobIntentService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
 

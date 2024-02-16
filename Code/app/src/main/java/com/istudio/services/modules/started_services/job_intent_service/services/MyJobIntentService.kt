@@ -1,4 +1,4 @@
-package com.istudio.services.modules.job_intent_service.services
+package com.istudio.services.modules.started_services.job_intent_service.services
 
 import android.content.Context
 import android.content.Intent

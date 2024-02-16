@@ -12,16 +12,21 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.istudio.services.ui.composables.AppButton
+import com.istudio.services.ui.composables.AppText
 
 @Composable
 fun ModuleSelectionScreen(navController: NavHostController) {
     Column(
-        modifier = Modifier.fillMaxSize().padding(10.dp),
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(10.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
 
         Spacer(modifier = Modifier.height(16.dp))
+        AppText(text = "UnBound Services")
+        Spacer(modifier = Modifier.height(3.dp))
 
         AppButton(text = "Normal Service", onClick = {
             navController.navigate(ModuleDemo.NormalServiceScreen.rout)
@@ -37,6 +42,14 @@ fun ModuleSelectionScreen(navController: NavHostController) {
 
         AppButton(text = "Job Intent Service", onClick = {
             navController.navigate(ModuleDemo.JobIntentServiceScreen.rout)
+        })
+
+        Spacer(modifier = Modifier.height(16.dp))
+        AppText(text = "Bound Services")
+        Spacer(modifier = Modifier.height(3.dp))
+
+        AppButton(text = "Media Player", onClick = {
+            navController.navigate(ModuleDemo.MediaPlayerServiceScreen.rout)
         })
 
     }

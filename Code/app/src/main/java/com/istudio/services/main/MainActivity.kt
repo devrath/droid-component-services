@@ -13,10 +13,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.istudio.services.module_selection.ModuleDemo
 import com.istudio.services.module_selection.ModuleSelectionScreen
-import com.istudio.services.modules.intent_service.IntentServiceScreen
-import com.istudio.services.modules.job_intent_service.JobIntentServiceScreen
-import com.istudio.services.modules.job_scheduler.JobSchedularScreen
-import com.istudio.services.modules.normal_service.NormalServiceScreen
+import com.istudio.services.modules.started_services.intent_service.IntentServiceScreen
+import com.istudio.services.modules.started_services.job_intent_service.JobIntentServiceScreen
+import com.istudio.services.modules.started_services.job_scheduler.JobSchedularScreen
+import com.istudio.services.modules.started_services.normal_service.NormalServiceScreen
 import com.istudio.services.ui.theme.CodeTheme
 import dagger.hilt.android.AndroidEntryPoint
 

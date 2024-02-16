@@ -1,4 +1,4 @@
-package com.istudio.services.modules.job_intent_service
+package com.istudio.services.modules.started_services.job_intent_service
 
 import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
@@ -11,7 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.istudio.services.modules.job_intent_service.services.MyJobIntentService
+import com.istudio.services.modules.started_services.job_intent_service.services.MyJobIntentService
 import com.istudio.services.ui.composables.AppButton
 
 @Composable

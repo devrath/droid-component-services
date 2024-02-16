@@ -1,4 +1,4 @@
-package com.istudio.services.modules.job_scheduler
+package com.istudio.services.modules.started_services.job_scheduler
 
 import android.app.job.JobInfo
 import android.app.job.JobScheduler
@@ -16,7 +16,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.navigation.NavHostController
-import com.istudio.services.modules.job_scheduler.services.MyJobScheduler
+import com.istudio.services.modules.started_services.job_scheduler.services.MyJobScheduler
 import com.istudio.services.ui.composables.AppButton
 import com.istudio.services.utils.toast.toast
 

@@ -1,4 +1,4 @@
-package com.istudio.services.modules.normal_service
+package com.istudio.services.modules.started_services.normal_service
 
 import android.content.Intent
 import androidx.compose.foundation.layout.Arrangement
@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
-import com.istudio.services.modules.normal_service.services.NormalDownloadService
+import com.istudio.services.modules.started_services.normal_service.services.NormalDownloadService
 import com.istudio.services.ui.composables.AppButton
 import com.istudio.services.utils.toast.toast
 
@@ -45,7 +45,7 @@ fun NormalServiceScreen(navController: NavHostController) {
         Spacer(modifier = Modifier.height(5.dp))
         AppButton(text = "Stop Service", onClick = {
             if(NormalDownloadService.isServiceRunning){
-                val intent = Intent(cxt,NormalDownloadService::class.java)
+                val intent = Intent(cxt, NormalDownloadService::class.java)
                 cxt.stopService(intent)
             }
         })
