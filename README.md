@@ -13,7 +13,7 @@
 
 ## `Contents`
 * [`About Services`](https://github.com/devrath/droid-component-services/wiki/About-services)
-* [Bound Service and UnBound Service](https://github.com/devrath/droid-component-services/wiki/Bound-Service-and-UnBound-Service)
+* [`Bound Service and UnBound Service`](https://github.com/devrath/droid-component-services/wiki/Bound-Service-and-UnBound-Service)
 
 
 
