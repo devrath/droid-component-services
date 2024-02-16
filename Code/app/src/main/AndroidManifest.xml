@@ -30,6 +30,7 @@
         </activity>
 
         <service android:name=".modules.normal_service.services.NormalDownloadService" />
+        <service android:name=".modules.intent_service.services.IntentDownloadService" android:exported="false" />
 
     </application>
 

@@ -5,5 +5,6 @@ sealed class ModuleDemo(val rout: String) {
 
 
     data object NormalServiceScreen : ModuleDemo("NormalDownloadServiceScreen")
+    data object IntentServiceScreen : ModuleDemo("IntentServiceScreen")
 
 }

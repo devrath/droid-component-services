@@ -13,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.istudio.services.module_selection.ModuleDemo
 import com.istudio.services.module_selection.ModuleSelectionScreen
+import com.istudio.services.modules.intent_service.IntentServiceScreen
 import com.istudio.services.modules.normal_service.NormalServiceScreen
 import com.istudio.services.ui.theme.CodeTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -37,16 +38,12 @@ class MainActivity : ComponentActivity() {
                         navController = navController,
                         startDestination = ModuleDemo.DemoSelection.rout
                     ) {
-
                         // Selection Screen
-                        composable(ModuleDemo.DemoSelection.rout) {
-                            ModuleSelectionScreen(navController = navController)
-                        }
-
+                        composable(ModuleDemo.DemoSelection.rout) { ModuleSelectionScreen(navController = navController) }
                         // Normal Service
-                        composable(ModuleDemo.NormalServiceScreen.rout) {
-                            NormalServiceScreen(navController = navController)
-                        }
+                        composable(ModuleDemo.NormalServiceScreen.rout) { NormalServiceScreen(navController = navController) }
+                        // Intent Service
+                        composable(ModuleDemo.IntentServiceScreen.rout) { IntentServiceScreen(navController = navController) }
 
                     }
                 }
