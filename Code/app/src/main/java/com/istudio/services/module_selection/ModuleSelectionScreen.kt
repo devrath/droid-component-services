@@ -23,8 +23,8 @@ fun ModuleSelectionScreen(navController: NavHostController) {
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        AppButton(text = "Handling Side Effects", onClick = {
-            //navController.navigate(ModuleDemo.HandlingSideEffects.rout)
+        AppButton(text = "Normal Service", onClick = {
+            navController.navigate(ModuleDemo.NormalServiceScreen.rout)
         })
 
     }
