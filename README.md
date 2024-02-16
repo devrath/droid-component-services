@@ -15,12 +15,12 @@
 * [`About Services`](https://github.com/devrath/droid-component-services/wiki/About-services)
 * [`Bound Service and UnBound Service`](https://github.com/devrath/droid-component-services/wiki/Bound-Service-and-UnBound-Service)
 * **`Services by Class`**
-  * **UnBound Service**
+  * _**`UnBound Service`**_
     * [`Normal Service`](https://github.com/devrath/droid-component-services/wiki/Normal-Service)
     * [`Intent Service`](https://github.com/devrath/droid-component-services/wiki/Intent-Service)
     * [`Job Scheduler`](https://github.com/devrath/droid-component-services/wiki/Job-Scheduler)
     * [`Job Intent Service`](https://github.com/devrath/droid-component-services/wiki/Job-Intent-Service)
-  * **Bound Service**
+  * _**`Bound Service`**_
 
 
 ## **`𝙲𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚎`** 🙋‍♂️
