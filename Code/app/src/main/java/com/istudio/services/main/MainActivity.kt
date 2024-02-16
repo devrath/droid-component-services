@@ -13,6 +13,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.istudio.services.module_selection.ModuleDemo
 import com.istudio.services.module_selection.ModuleSelectionScreen
+import com.istudio.services.modules.bound_services.media_player.MediaPlayerScreen
 import com.istudio.services.modules.started_services.intent_service.IntentServiceScreen
 import com.istudio.services.modules.started_services.job_intent_service.JobIntentServiceScreen
 import com.istudio.services.modules.started_services.job_scheduler.JobSchedularScreen
@@ -50,6 +51,8 @@ class MainActivity : ComponentActivity() {
                         composable(ModuleDemo.JobSchedularScreen.rout) { JobSchedularScreen(navController = navController) }
                         // Job Intent service
                         composable(ModuleDemo.JobIntentServiceScreen.rout) { JobIntentServiceScreen(navController = navController) }
+                        // Media player
+                        composable(ModuleDemo.MediaPlayerServiceScreen.rout) { MediaPlayerScreen(navController = navController) }
                     }
                 }
             }
