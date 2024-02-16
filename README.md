@@ -16,7 +16,7 @@
 * [`Bound Service and UnBound Service`](https://github.com/devrath/droid-component-services/wiki/Bound-Service-and-UnBound-Service)
 * **`Services by Class`**
   * [`Normal Service`](https://github.com/devrath/droid-component-services/wiki/Normal-Service)
-  * `Intent Service`
+  * [`Intent Service`](https://github.com/devrath/droid-component-services/wiki/Intent-Service)
   * `Job Intent Service`
 
 
