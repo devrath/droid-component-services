@@ -17,7 +17,7 @@
 * **`Services by Class`**
   * [`Normal Service`](https://github.com/devrath/droid-component-services/wiki/Normal-Service)
   * [`Intent Service`](https://github.com/devrath/droid-component-services/wiki/Intent-Service)
-  * `Job Intent Service`
+  * [`Job Scheduler`](https://github.com/devrath/droid-component-services/wiki/Job-Scheduler)
 
 
 ## **`𝙲𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚎`** 🙋‍♂️
