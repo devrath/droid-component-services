@@ -19,6 +19,7 @@
     * [`Normal Service`](https://github.com/devrath/droid-component-services/wiki/Normal-Service)
     * [`Intent Service`](https://github.com/devrath/droid-component-services/wiki/Intent-Service)
     * [`Job Scheduler`](https://github.com/devrath/droid-component-services/wiki/Job-Scheduler)
+    * [`Job Intent Service`](https://github.com/devrath/droid-component-services/wiki/Job-Intent-Service)
   * **Bound Service**
 
 
