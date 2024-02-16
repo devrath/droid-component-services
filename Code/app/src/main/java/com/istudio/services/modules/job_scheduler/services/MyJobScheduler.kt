@@ -10,6 +10,11 @@ class MyJobScheduler : JobService() {
         const val SERVICE_DURATION = 4000L
     }
 
+    override fun onCreate() {
+        super.onCreate()
+        Log.d(TAG, "On Create is triggered")
+    }
+
     override fun onStartJob(params: JobParameters?): Boolean {
         Thread.sleep(SERVICE_DURATION)
         // Remember to call jobFinished() when the task is complete

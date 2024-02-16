@@ -14,6 +14,7 @@ import androidx.navigation.compose.rememberNavController
 import com.istudio.services.module_selection.ModuleDemo
 import com.istudio.services.module_selection.ModuleSelectionScreen
 import com.istudio.services.modules.intent_service.IntentServiceScreen
+import com.istudio.services.modules.job_intent_service.JobIntentServiceScreen
 import com.istudio.services.modules.job_scheduler.JobSchedularScreen
 import com.istudio.services.modules.normal_service.NormalServiceScreen
 import com.istudio.services.ui.theme.CodeTheme
@@ -47,7 +48,8 @@ class MainActivity : ComponentActivity() {
                         composable(ModuleDemo.IntentServiceScreen.rout) { IntentServiceScreen(navController = navController) }
                         // Job Scheduler
                         composable(ModuleDemo.JobSchedularScreen.rout) { JobSchedularScreen(navController = navController) }
-
+                        // Job Intent service
+                        composable(ModuleDemo.JobIntentServiceScreen.rout) { JobIntentServiceScreen(navController = navController) }
                     }
                 }
             }

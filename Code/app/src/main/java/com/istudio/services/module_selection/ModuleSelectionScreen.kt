@@ -35,5 +35,9 @@ fun ModuleSelectionScreen(navController: NavHostController) {
             navController.navigate(ModuleDemo.JobSchedularScreen.rout)
         })
 
+        AppButton(text = "Job Intent Service", onClick = {
+            navController.navigate(ModuleDemo.JobIntentServiceScreen.rout)
+        })
+
     }
 }

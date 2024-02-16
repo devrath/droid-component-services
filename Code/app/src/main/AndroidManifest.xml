@@ -35,6 +35,10 @@
         <service
             android:name=".modules.job_scheduler.services.MyJobScheduler"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".modules.job_intent_service.services.MyJobIntentService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
 
     </application>
 
