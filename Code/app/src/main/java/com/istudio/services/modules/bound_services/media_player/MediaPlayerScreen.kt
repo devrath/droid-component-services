@@ -25,7 +25,11 @@ fun MediaPlayerScreen(navController: NavHostController) {
         verticalArrangement = Arrangement.Center,
     ) {
 
-        AppButton(text = "Media", onClick = {
+        AppButton(text = "Play", onClick = {
+            val intent = Intent(cxt, IntentDownloadService::class.java)
+            cxt.startService(intent)
+        })
+        AppButton(text = "Stop", onClick = {
             val intent = Intent(cxt, IntentDownloadService::class.java)
             cxt.startService(intent)
         })
