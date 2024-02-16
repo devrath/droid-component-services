@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".application.CurrentApplication"
@@ -31,6 +32,9 @@
 
         <service android:name=".modules.normal_service.services.NormalDownloadService" />
         <service android:name=".modules.intent_service.services.IntentDownloadService" android:exported="false" />
+        <service
+            android:name=".modules.job_scheduler.services.MyJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
 
     </application>
 
