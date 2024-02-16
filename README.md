@@ -14,7 +14,10 @@
 ## `Contents`
 * [`About Services`](https://github.com/devrath/droid-component-services/wiki/About-services)
 * [`Bound Service and UnBound Service`](https://github.com/devrath/droid-component-services/wiki/Bound-Service-and-UnBound-Service)
-
+* **`Services by Class`**
+  * [`Normal Service`](https://github.com/devrath/droid-component-services/wiki/Normal-Service)
+  * `Intent Service`
+  * `Job Intent Service`
 
 
 ## **`𝙲𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚎`** 🙋‍♂️
