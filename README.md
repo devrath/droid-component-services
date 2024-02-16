@@ -21,7 +21,8 @@
     * [`Job Scheduler`](https://github.com/devrath/droid-component-services/wiki/Job-Scheduler)
     * [`Job Intent Service`](https://github.com/devrath/droid-component-services/wiki/Job-Intent-Service)
   * _**`Bound Service`**_
-    * [`Using bound service with AIDL`](https://github.com/devrath/AIDL-Alchemy)
+    * [`Communicate between applications using AIDL`](https://github.com/devrath/AIDL-Alchemy)
+    * [`Playing song using media player`]()
 
 
 ## **`𝙲𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚎`** 🙋‍♂️
