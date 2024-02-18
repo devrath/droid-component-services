@@ -36,7 +36,6 @@ import com.istudio.services.ui.composables.AppButton
 @Composable
 fun MediaPlayerScreen(
     navController: NavHostController
-
 ) {
 
     val cxt = LocalContext.current
@@ -50,22 +49,6 @@ fun MediaPlayerScreen(
 
 
     var isServiceBound by remember { mutableStateOf(false) }
-
-
-    // <-------------- One Time Launch Event -------------->
-    LaunchedEffect(key1 = Unit){
-        viewModel.uiEvent.collect{event ->
-            when (event) {
-                is MainViewEvent.PlayServiceStatus -> {
-
-                }
-
-                is MainViewEvent.IsPlayerPlaying -> {
-
-                }
-            }
-        }
-    }
 
 
     // If `lifecycleOwner` changes, dispose and reset the effect
@@ -96,8 +79,7 @@ fun MediaPlayerScreen(
     ) {
 
         AppButton(text = "Start Service", onClick = {
-            val intent = Intent(cxt, IntentDownloadService::class.java)
-            cxt.startService(intent)
+
         })
 
         AppButton(
@@ -116,8 +98,9 @@ fun MediaPlayerScreen(
                 }
             })
         AppButton(text = "Stop", onClick = {
-            val intent = Intent(cxt, IntentDownloadService::class.java)
-            cxt.startService(intent)
+            viewModel.apply {
+                onEvent(MainViewEvent.StopService)
+            }
         })
 
     }

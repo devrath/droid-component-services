@@ -37,8 +37,16 @@ class MainViewModel @Inject constructor( ) : ViewModel() {
                 }
 
                 is MainViewEvent.IsPlayerPlaying -> {
-                    viewState.value = viewState.value.copy(isPlaying = event.isPlaying)
+                    viewState.value = viewState.value.copy(
+                        isPlaying = event.isPlaying, playerStopped = false
+                    )
                 }
+
+                is MainViewEvent.StopService -> {
+                    viewState.value = viewState.value.copy(playerStopped = true)
+                }
+
+                else -> {}
             }
         }
     }
