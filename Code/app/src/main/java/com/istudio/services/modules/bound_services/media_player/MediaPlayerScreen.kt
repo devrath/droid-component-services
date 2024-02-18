@@ -67,6 +67,10 @@ fun MediaPlayerScreen(
                                 playerService?.pause()
                                 onEvent(MainViewEvent.IsPlayerPlaying(isPlaying = false))
                             } else {
+                                // Start the service
+                                val playerIntent = Intent(cxt,PlayerService::class.java)
+                                cxt.startService(playerIntent)
+                                // Initiate play of service
                                 playerService?.play()
                                 onEvent(MainViewEvent.IsPlayerPlaying(isPlaying = true))
                             }

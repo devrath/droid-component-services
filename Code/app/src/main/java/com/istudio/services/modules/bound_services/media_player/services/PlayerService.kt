@@ -30,6 +30,14 @@ class PlayerService : Service() {
         return mBinder
     }
 
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
+        mediaPlayer.setOnCompletionListener {
+            // When the song is complete --> Stop the service itself
+            stopSelf()
+        }
+        return START_NOT_STICKY
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG,"onDestroy called")
