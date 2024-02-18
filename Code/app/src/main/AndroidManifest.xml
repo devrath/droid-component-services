@@ -30,6 +30,7 @@
             </intent-filter>
         </activity>
 
+        <!-- Started Services -->
         <service android:name=".modules.started_services.normal_service.services.NormalDownloadService" />
         <service android:name=".modules.started_services.intent_service.services.IntentDownloadService" android:exported="false" />
         <service
@@ -38,7 +39,11 @@
         <service
             android:name=".modules.started_services.job_intent_service.services.MyJobIntentService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
+        <!-- Started Services -->
 
+        <!-- Bound Services -->
+        <service android:name=".modules.bound_services.media_player.services.PlayerService" />
+        <!-- Bound Services -->
 
     </application>
 
