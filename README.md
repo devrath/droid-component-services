@@ -23,6 +23,7 @@
   * _**`Bound Service`**_
     * [`Communicate between applications using AIDL`](https://github.com/devrath/AIDL-Alchemy)
     * [`Playing song using media player`](https://github.com/devrath/droid-component-services/wiki/Bound-Service:-Using-media-player)
+      * [`Just Bound service`](https://github.com/devrath/droid-component-services/wiki/Just-Bound-service) 
 
 
 ## **`𝙲𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚎`** 🙋‍♂️
