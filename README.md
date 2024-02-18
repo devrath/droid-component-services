@@ -22,7 +22,7 @@
     * [`Job Intent Service`](https://github.com/devrath/droid-component-services/wiki/Job-Intent-Service)
   * _**`Bound Service`**_
     * [`Communicate between applications using AIDL`](https://github.com/devrath/AIDL-Alchemy)
-    * [`Playing song using media player`]()
+    * [`Playing song using media player`](https://github.com/devrath/droid-component-services/wiki/Bound-Service:-Using-media-player)
 
 
 ## **`𝙲𝚘𝚗𝚝𝚛𝚒𝚋𝚞𝚝𝚎`** 🙋‍♂️
