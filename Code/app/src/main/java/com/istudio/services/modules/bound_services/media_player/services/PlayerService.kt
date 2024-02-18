@@ -7,6 +7,8 @@ import android.os.Binder
 import android.os.IBinder
 import android.util.Log
 import com.istudio.services.R
+import kotlinx.coroutines.flow.MutableStateFlow
+import java.lang.IllegalStateException
 
 
 class PlayerService : Service() {
@@ -50,10 +52,21 @@ class PlayerService : Service() {
     /**
      * <*********************>Client methods bound to service<*********************>
      */
-    private fun start() { mediaPlayer = MediaPlayer.create(this, R.raw.pikachu) }
-    fun play() { mediaPlayer.start() }
+    private fun start() {
+        mediaPlayer = MediaPlayer.create(this, R.raw.pikachu)
+    }
+    fun play() {
+        try {
+            mediaPlayer.start()
+        }catch (ex:IllegalStateException){
+            ex.printStackTrace()
+        }
+    }
     fun pause() { mediaPlayer.pause() }
-    private fun stop() { mediaPlayer.release() }
+    fun stop() {
+        mediaPlayer.stop()
+        mediaPlayer.release()
+    }
     fun isPlaying() =  mediaPlayer.isPlaying
     /**
      * <*********************>Client methods bound to service<*********************>

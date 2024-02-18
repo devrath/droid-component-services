@@ -46,7 +46,6 @@ class MainViewModel @Inject constructor( ) : ViewModel() {
                     viewState.value = viewState.value.copy(playerStopped = true)
                 }
 
-                else -> {}
             }
         }
     }
