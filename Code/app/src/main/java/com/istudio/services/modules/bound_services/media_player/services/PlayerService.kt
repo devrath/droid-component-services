@@ -12,14 +12,15 @@ import com.istudio.services.R
 class PlayerService : Service() {
 
     val TAG = PlayerService::class.java.name
-    lateinit var mediaPlayer : MediaPlayer
 
-    val mBinder : IBinder = LocalBinder()
+    private val mBinder : IBinder = LocalBinder()
+
+    private lateinit var mediaPlayer : MediaPlayer
 
     override fun onCreate() {
         super.onCreate()
         Log.d(TAG,"OnCreate called")
-        mediaPlayer = MediaPlayer.create(this, R.raw.pikachu)
+        start()
     }
 
     override fun onBind(intent: Intent?): IBinder {
@@ -30,7 +31,7 @@ class PlayerService : Service() {
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG,"onDestroy called")
-        mediaPlayer.release()
+        stop()
     }
 
     /**
@@ -49,14 +50,10 @@ class PlayerService : Service() {
     /**
      * <*********************>Client methods bound to service<*********************>
      */
-    fun play(){
-        mediaPlayer.start()
-    }
-
-    fun pause(){
-        mediaPlayer.pause()
-    }
-
+    private fun start() { mediaPlayer = MediaPlayer.create(this, R.raw.pikachu) }
+    fun play() { mediaPlayer.start() }
+    fun pause() { mediaPlayer.pause() }
+    private fun stop() { mediaPlayer.release() }
     fun isPlaying() =  mediaPlayer.isPlaying
     /**
      * <*********************>Client methods bound to service<*********************>

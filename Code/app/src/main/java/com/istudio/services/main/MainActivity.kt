@@ -40,8 +40,10 @@ class MainActivity : ComponentActivity() {
             // Handle the connection to the service
             viewModel.onEvent(MainViewEvent.PlayServiceStatus(isConnected = true))
             iBinder?.let {
+                // Get the binder instance from the service
                 val localBinder = iBinder as LocalBinder
                 viewModel.playerService = localBinder.service
+
                 viewModel.playerService?.let {
                     if(it.isPlaying()){
                         viewModel.onEvent(MainViewEvent.IsPlayerPlaying(true))
@@ -91,8 +93,8 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
-        // Bind to the service
-        bindService(Intent(this, PlayerService::class.java), serviceConnection, Context.BIND_AUTO_CREATE)
+
+        bindServiceForComponent(isBind = true)
     }
 
     override fun onDestroy() {
@@ -100,9 +102,23 @@ class MainActivity : ComponentActivity() {
         // Unbind service
         if(viewModel.viewState.value.isPlayServiceConnected){
             // unbind the service
-            unbindService(serviceConnection)
+            bindServiceForComponent(isBind = false)
             // Set the flag that service is not connected
             viewModel.onEvent(MainViewEvent.PlayServiceStatus(isConnected = false))
+        }
+    }
+
+
+    /**
+     * Bind and Unbind from one place
+     */
+    private fun bindServiceForComponent(isBind:Boolean) {
+        if(isBind){
+            // Bind to the service
+            bindService(Intent(this, PlayerService::class.java), serviceConnection, Context.BIND_AUTO_CREATE)
+        }else{
+            // Unbind the service
+            unbindService(serviceConnection)
         }
     }
 }
