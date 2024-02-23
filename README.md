@@ -23,10 +23,6 @@
   * _**`Bound Service`**_
     * [`Communicate between applications using AIDL`](https://github.com/devrath/AIDL-Alchemy)
     * `Music Player Example`
-      * [`Where to bind and where to unbind the bound service`](https://github.com/devrath/droid-component-services/wiki/Where-to-bind-and-where-to-unbind-the-bound-service)
-      * [`Playing song using separate process using messenger`](https://github.com/devrath/droid-component-services/wiki/Playing-song-using-separate-process-using-messenger)
-      * [`Playing song using media player`](https://github.com/devrath/droid-component-services/wiki/Bound-Service:-Using-media-player)
-      * [`Just Bound service`](https://github.com/devrath/droid-component-services/wiki/Just-Bound-service) 
   * _**`(Started + Bound Service) => Combined`**_
     * [`Player example code`](https://github.com/devrath/droid-component-services/wiki/(Started---Bound-)-=--Player-example-code)
 
